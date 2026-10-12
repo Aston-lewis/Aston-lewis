@@ -72,11 +72,9 @@
 <h2 align="center">💻 Tech Stack & Tools</h2>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,bootstrap,jquery&perline=8&theme=dark" alt="Web development technologies"/>
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,bootstrap,jquery,github,linux&perline=8&theme=dark" alt="Web development technologies"/>
   <br/>
-  <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql&perline=8&theme=dark" alt="Programming languages and databases"/>
-  <br/>
-  <img src="https://skillicons.dev/icons?i=git,github,linux,docker&perline=8&theme=dark" alt="Developer tools"/>
+  <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql,git,docker&perline=8&theme=dark" alt="Programming languages and databases"/>
 </p>
 
 
