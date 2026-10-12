@@ -77,7 +77,10 @@
   <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql,git,docker&perline=10&theme=dark" alt="Programming languages and databases"/>
 </p>
 </br>
-
+---
+<div>
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Aston-lewis&theme=dark&timezone=IST" alt="GitHub Streak" /></a>
+</div>
 
 
 
