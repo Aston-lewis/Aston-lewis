@@ -76,14 +76,14 @@
   <br>
   <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql,git,docker&perline=10&theme=dark" alt="Programming languages and databases"/>
 </p>
+<hr>
 <br><br>
 
 <div align = "center">
   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Aston-lewis&theme=dark&timezone=IST" alt="GitHub Streak" /></a>
 </div>
 </br>
-
-
+<hr>
 
 <h2 align="center">👾 My GitHub Contribution Graph</h2>
 
