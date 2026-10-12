@@ -69,6 +69,17 @@
 <br>
 <br>
 
+<h2 align="center">💻 Tech Stack & Tools</h2>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,bootstrap,jquery&perline=8&theme=dark" alt="Web development technologies"/>
+  <br/>
+  <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql&perline=8&theme=dark" alt="Programming languages and databases"/>
+  <br/>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,docker&perline=8&theme=dark" alt="Developer tools"/>
+</p>
+
+
 
 
 <h2 align="center">👾 My GitHub Contribution Graph</h2>
@@ -84,9 +95,3 @@
     alt="Pacman eating my GitHub contributions"
     src="https://raw.githubusercontent.com/Aston-lewis/Aston-lewis/output/pacman-contribution-graph.svg">
 </picture>
-<br/>
-<h2 align = "center">🛠️ Tech stack and align tools</h2>
-
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,express&perline=8&theme=dark"/>
-<br/>
-<img src="https://skillicons.dev/icons?i=python,django,flask,mongodb,postgres,redis,docker,aws&perline=8&theme=dark"/>
