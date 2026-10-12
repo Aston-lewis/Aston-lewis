@@ -1,4 +1,6 @@
-
+<div align = center>
+  <img src ="https://capsule-render.vercel.app/api?type=waving&height=300&color=timeAuto&section=header&reversal=false&text=Hi%2C+I%27m+Aston%21&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60" />
+</div>
 <h1 align="center">Hey there! 👋 I'm Aston Lewis</h1>
 
 <p align="center">
