@@ -18,19 +18,38 @@
   Computer Engineering Student | AI & ML | Developer
 </p>
 <br><br>
-## 👋 About Me
 
-🎓 Third-year Computer Engineering student specializing in AI & Machine Learning
+<h2 align="center">👨‍💻 About Me</h2>
 
-💻 Aspiring Full-Stack Developer passionate about building web applications
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <h3>🎓 Education</h3>
+      Third-year Computer Engineering student specializing in AI & Machine Learning.
+    </td>
+    <td align="center" width="50%">
+      <h3>💻 Full-Stack Development</h3>
+      Building web applications and exploring modern frontend and backend technologies.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <h3>🤖 AI & Machine Learning</h3>
+      Exploring ML, Deep Learning, NLP, LLMs, and AI-powered applications.
+    </td>
+    <td align="center" width="50%">
+      <h3>🧠 Problem Solving</h3>
+      Practicing DSA and solving LeetCode problems using C++.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <h3>🚀 Currently Building</h3>
+      Projects involving AI, web development, and local LLMs.
+    </td>
+  </tr>
+</table>
 
-🤖 AI/ML Enthusiast exploring Machine Learning, Deep Learning, and LLMs
-
-🧠 Practicing Data Structures & Algorithms and solving LeetCode problems using C++
-
-🌐 Exploring full-stack technologies and modern web development
-
-🛠️ Building projects involving AI, web development, and local LLMs
 <br>
 <br>
 
@@ -65,3 +84,9 @@
     alt="Pacman eating my GitHub contributions"
     src="https://raw.githubusercontent.com/Aston-lewis/Aston-lewis/output/pacman-contribution-graph.svg">
 </picture>
+<br/>
+<h2 align = "center">🛠️ Tech stack and align tools</h2>
+
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,express&perline=8&theme=dark"/>
+<br/>
+<img src="https://skillicons.dev/icons?i=python,django,flask,mongodb,postgres,redis,docker,aws&perline=8&theme=dark"/>
