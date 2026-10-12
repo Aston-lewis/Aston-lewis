@@ -76,6 +76,7 @@
   <br/>
   <img src="https://skillicons.dev/icons?i=python,java,c,cpp,r,postgres,mongodb,mysql,git,docker&perline=10&theme=dark" alt="Programming languages and databases"/>
 </p>
+</br>
 
 
 
