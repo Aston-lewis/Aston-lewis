@@ -1,6 +1,7 @@
 <div align = center>
   <img src ="https://capsule-render.vercel.app/api?type=waving&height=300&color=timeAuto&section=header&reversal=false&text=Hi%2C+I%27m+Aston%21&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60" />
 </div>
+<br><br>
 
 <div align="center">
   <a href="https://git.io/typing-svg">
@@ -16,7 +17,7 @@
 <p align="center">
   Computer Engineering Student | AI & ML | Developer
 </p>
-
+<br><br>
 ## 👋 About Me
 
 🎓 Third-year Computer Engineering student specializing in AI & Machine Learning
@@ -30,17 +31,29 @@
 🌐 Exploring full-stack technologies and modern web development
 
 🛠️ Building projects involving AI, web development, and local LLMs
+<br>
+<br>
 
 <div align="center">
+  
   <a href="https://www.linkedin.com/in/aston-valerine-lewis-a421523ba/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  
   <a href="https://twitter.com/Aston-lewis"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>
+  
   <a href="https://instagram.com/Aston-lewis"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+  
   <a href="https://youtube.com/Aston-lewis"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+  
   <a href="https://dev.to/Aston-lewis"><img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white"/></a>
-  <a href="mailto:astonvlewis19@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=astonvlewis19@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+</a>
+
 </div>
 
-
+<br>
+<br>
 
 
 
