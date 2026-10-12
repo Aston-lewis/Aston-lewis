@@ -32,7 +32,7 @@
 🛠️ Building projects involving AI, web development, and local LLMs
 
 <div align="center">
-  <a href="https://linkedin.com/in/Aston-lewis"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="[https://linkedin.com/in/Aston-lewis](https://in.linkedin.com/in/aston-valerine-lewis-a421523ba?trk=people-guest_people_search-card)"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://twitter.com/Aston-lewis"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>
   <a href="https://instagram.com/Aston-lewis"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
   <a href="https://youtube.com/Aston-lewis"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
