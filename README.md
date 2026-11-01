@@ -1,6 +1,6 @@
-<div align="center">
-
-<img src="./assets/terminal.svg" width="100%" alt="Animated terminal: whoami prints the SLYLEM0 banner, fastfetch shows Omarchy, Hyprland and my stack, then 'Math, Logic & Cybersecurity are my playgrounds'." />
+<p align="center">
+  <img src="assets/terminal.svg" width="880" alt="ASTON animated terminal">
+</p>
 
 <br/>
 
