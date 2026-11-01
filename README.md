@@ -1,4 +1,11 @@
 
+<div align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:12343B,100:0D1117&height=180&section=header&text=Aston%20Lewis&fontSize=48&fontColor=E6EDF3&fontAlignY=40&desc=AI%20%26%20ML%20%7C%20Full-Stack%20Developer&descSize=16&descAlignY=60&animation=fadeIn"
+    width="100%"
+  />
+</div>
+
 <br><br>
 
 <div align="center">
