@@ -1,6 +1,14 @@
 <div align="center">
 
 <img src="./assets/terminal.svg" width="100%" alt="Animated terminal: whoami prints the SLYLEM0 banner, fastfetch shows Omarchy, Hyprland and my stack, then 'Math, Logic & Cybersecurity are my playgrounds'." />
+
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-pablo--nicolas--marin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-nicolas-marin)
+[![Instagram](https://img.shields.io/badge/Instagram-pablit0__clavito____-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pablit0_clavito__/)
+[![Email](https://img.shields.io/badge/Email-pnicolasmarin2007%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pnicolasmarin2007@gmail.com)
+
+</div>
 <div align="center">
   <img
     src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:12343B,100:0D1117&height=180&section=header&text=Aston%20Lewis&fontSize=48&fontColor=E6EDF3&fontAlignY=40&desc=AI%20%26%20ML%20%7C%20Full-Stack%20Developer&descSize=16&descAlignY=60&animation=fadeIn"
