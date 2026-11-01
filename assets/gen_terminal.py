@@ -1,192 +1,558 @@
-"""Genera assets/terminal.svg: una terminal animada (SMIL, sin JavaScript) para
-el README del perfil. GitHub muestra las animaciones SVG dentro de <img>.
+#!/usr/bin/env python3
 
-Uso: python gen_terminal.py <ruta-salida.svg> <banner.txt>
 """
+Animated terminal SVG generator for a GitHub profile README.
+
+Usage:
+    python gen_terminal.py terminal.svg banner.txt
+
+If banner.txt is omitted, the default banner is used.
+"""
+
+import html
 import sys
-from html import escape
-
-OUT, BANNER = sys.argv[1], sys.argv[2]
-
-T = 20.0  # duración del ciclo completo (s); luego vuelve a empezar
-W, LH, FS = 880, 19, 13.5
-X0, Y0 = 26, 70
-
-C = {
-    'bg': '#0d1117', 'bar': '#161b22', 'border': '#30363d', 'text': '#c9d1d9',
-    'dim': '#8b949e', 'green': '#7ee787', 'blue': '#79c0ff', 'gold': '#e3b341',
-    'arch': '#1793d1', 'red': '#ff7b72', 'purple': '#d2a8ff',
-}
-
-parts = []
+from pathlib import Path
 
 
-def show(t, end=0.975, attr='opacity'):
-    """Aparece en el segundo `t` y se queda hasta el final del ciclo."""
-    return (f'<animate attributeName="{attr}" values="0;1;0" keyTimes="0;{t / T:.4f};{end}" '
-            f'dur="{T}s" repeatCount="indefinite" calcMode="discrete"/>')
+# ============================================================
+# CUSTOMIZE YOUR PROFILE DETAILS HERE
+# ============================================================
+
+USERNAME = "Aston-lewis"
+NAME = "Aston Valerine Lewis"
+EDUCATION = "AIML @ SJEC"
+
+# Your terminal setup
+TERMINAL = "Ghostty"
+MULTIPLEXER = "tmux"
+
+# Your system and tools
+OS = "Omarchy (Arch Linux)"
+WM = "Hyprland"
+EDITOR = "VS Code"
+SHELL = "bash"
+
+# Your interests / skills
+INTERESTS = "AI · Machine Learning"
+LANGUAGES = "Python · C++ · C"
+FOCUS = "Computer Vision · ML"
+
+# Password prompt label
+PASSWORD_LABEL = "password for aston"
 
 
-def letter(ch, t):
-    """Letra que aparece en `t` (fill-opacity: funciona en <tspan>, opacity no)."""
-    ch = escape(ch) if ch != ' ' else '&#160;'
-    return f'<tspan fill-opacity="0">{ch}{show(t, attr="fill-opacity")}</tspan>'
+# ============================================================
+# SVG / ANIMATION SETTINGS
+# ============================================================
+
+WIDTH = 880
+HEIGHT = 655
+
+# Total animation duration
+CYCLE = 20
+
+# Main terminal colors
+BACKGROUND = "#0d1117"
+TERMINAL_BG = "#161b22"
+BORDER = "#30363d"
+TEXT_COLOR = "#c9d1d9"
+MUTED_COLOR = "#8b949e"
+GREEN = "#3fb950"
+BLUE = "#58a6ff"
+YELLOW = "#d29922"
+RED = "#f85149"
 
 
-def text(x, y, content, t, fill=None, extra=''):
-    fill_attr = f' fill="{fill}"' if fill else ''
-    parts.append(f'<text x="{x}" y="{y}" opacity="0"{fill_attr} {extra}>{content}{show(t)}</text>')
+# ============================================================
+# HELPER FUNCTIONS
+# ============================================================
+
+def esc(value):
+    """Escape text so it can safely be inserted into SVG."""
+    return html.escape(str(value), quote=True)
 
 
-def prompt(line, t, cmd, step=0.075):
-    """Prompt que aparece en `t` y luego "teclea" `cmd` letra por letra."""
-    y = Y0 + line * LH
-    p = (f'<tspan fill="{C["green"]}" font-weight="700">pablo@slylem0</tspan>'
-         f'<tspan fill="{C["text"]}">:</tspan><tspan fill="{C["blue"]}" font-weight="700">~</tspan>'
-         f'<tspan fill="{C["text"]}">$ </tspan>')
-    # Prompt y letras en el mismo <text>: las letras siguen al prompt sin
-    # depender del ancho de la fuente.
-    letters = ''.join(letter(ch, t + 0.25 + i * step) for i, ch in enumerate(cmd))
-    parts.append(f'<text x="{X0}" y="{y}" opacity="0">{p}<tspan fill="{C["text"]}">{letters}</tspan>'
-                 f'{show(t)}</text>')
-    return t + 0.25 + len(cmd) * step
+def show(content, start, duration=1.0):
+    """Show an SVG element during a specific time interval."""
+    end = start + duration
+
+    return f"""
+    <g opacity="0">
+        {content}
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="{start}s"
+            dur="{duration}s"
+            repeatCount="indefinite"
+        />
+    </g>
+    """
 
 
-line = 0
-t = prompt(line, 0.5, 'whoami')
+def letter(char, start, duration=0.04):
+    """Create a single animated character."""
+    return f"""
+    <tspan opacity="0">
+        {esc(char)}
+        <animate
+            attributeName="opacity"
+            from="0"
+            to="1"
+            begin="{start}s"
+            dur="0.01s"
+            fill="freeze"
+            repeatCount="indefinite"
+        />
+    </tspan>
+    """
 
-# Banner ANSI Shadow con brillo que recorre las letras.
-banner = [l.rstrip() for l in open(BANNER, encoding='utf-8').read().splitlines() if l.strip()]
-t += 0.3
-# Las letras de bloque necesitan un interlineado igual a la altura de la
-# fuente (con el de 19 px quedaban rayas entre filas).
-BLH = 15.5
-by = Y0 + (line + 1) * LH
-for i, row in enumerate(banner):
-    text(X0, by + i * BLH, escape(row), t + i * 0.07, 'url(#shine)',
-         'filter="url(#glow)" xml:space="preserve"')
-line += -(-int(len(banner) * BLH) // LH)  # filas de 19 px que ocupa el banner
-t += len(banner) * 0.07 + 0.25
-line += 1
-text(X0, Y0 + line * LH,
-     f'<tspan fill="{C["text"]}" font-weight="700">Pablo Nicolás Marín</tspan>'
-     f'<tspan fill="{C["dim"]}">  ·  Systems Engineering @ Universidad del Valle, Colombia</tspan>', t)
-line += 1
-text(X0, Y0 + line * LH,
-     f'<tspan fill="{C["dim"]}">cloud · linux · algorithms · math &amp; logic · a little bit of quantum</tspan>',
-     t + 0.15)
 
-# fastfetch con el logo de Arch.
-line += 2
-t = prompt(line, t + 0.6, 'fastfetch')
-logo = [
-    '        /\\',
-    '       /  \\',
-    '      /\\   \\',
-    '     /      \\',
-    '    /   ,,   \\',
-    '   /   |  |  -\\',
-    '  /_-\'\'    \'\'-_\\',
-]
-info = [
-    ('pablo', '@slylem0'),
-    ('───────────────', None),
-    ('OS', 'Omarchy (Arch Linux) x86_64'),
-    ('WM', 'Hyprland'),
-    ('Terminal', 'Ghostty · tmux'),
-    ('Editor', 'Neovim (LazyVim)'),
-    ('Shell', 'bash + starship'),
-    ('Cloud', 'AWS · Lambda · DynamoDB · Bedrock · CDK'),
-    ('Langs', 'TypeScript · Python · C++ · Java · Go'),
-    ('Club', 'AWS Student Builder Group @ Univalle'),
-]
-t += 0.35
-first = line + 1
-for i, row in enumerate(logo):
-    text(X0, Y0 + (first + 1 + i) * LH, escape(row), t + i * 0.05, C['arch'],
-         'font-weight="700" xml:space="preserve"')
-IX = X0 + 175
-for i, (k, v) in enumerate(info):
-    y = Y0 + (first + i) * LH
-    if i == 0:
-        content = (f'<tspan fill="{C["green"]}" font-weight="700">{k}</tspan>'
-                   f'<tspan fill="{C["text"]}">{v}</tspan>')
-    elif v is None:
-        content = f'<tspan fill="{C["dim"]}">{k}</tspan>'
-    else:
-        content = (f'<tspan fill="{C["gold"]}" font-weight="700">{k}</tspan>'
-                   f'<tspan x="{IX + 78}" fill="{C["text"]}">{escape(v)}</tspan>')
-    text(IX, y, content, t + 0.3 + i * 0.12)
-line = first + len(info)
-palette = ['#484f58', C['red'], C['green'], C['gold'], C['blue'], C['purple'], '#39c5cf', '#f0f6fc']
-blocks = ''.join(f'<rect x="{IX + j * 22}" y="{Y0 + line * LH - 11}" width="18" height="12" rx="2" fill="{c}"/>'
-                 for j, c in enumerate(palette))
-parts.append(f'<g opacity="0">{blocks}{show(t + 0.3 + len(info) * 0.12)}</g>')
-t += 0.3 + len(info) * 0.12 + 0.5
+def text_line(value, x, y, color=TEXT_COLOR, size=14, weight="normal"):
+    """Create a regular SVG text line."""
+    return f"""
+    <text
+        x="{x}"
+        y="{y}"
+        fill="{color}"
+        font-family="monospace"
+        font-size="{size}"
+        font-weight="{weight}"
+    >{esc(value)}</text>
+    """
 
-# Lema.
-line += 2
-t = prompt(line, t, 'cat playground.txt')
-line += 1
-text(X0, Y0 + line * LH,
-     f'<tspan fill="{C["purple"]}">"Math, Logic &amp; Cybersecurity are my playgrounds"</tspan>', t + 0.35)
-t += 0.9
 
-# xkcd 149.
-line += 2
-t = prompt(line, t, 'sudo make me-a-sandwich')
-line += 1
-y = Y0 + line * LH
-stars = ''.join(letter('*', t + 0.6 + i * 0.09) for i in range(8))
-text(X0, y, f'<tspan fill="{C["dim"]}">[sudo] password for pablo: {stars}</tspan>', t + 0.3)
-t += 0.6 + 8 * 0.09 + 0.4
-line += 1
-text(X0, Y0 + line * LH, f'<tspan fill="{C["green"]}">okay.</tspan>', t)
-t += 0.6
+def prompt(command, start, y, username=USERNAME):
+    """Create a terminal prompt with a command."""
+    prompt_text = f"{username}@github:~$ {command}"
 
-# Prompt final con cursor parpadeante (un bloque █ dentro del mismo <text>).
-line += 2
-y = Y0 + line * LH
-p = (f'<tspan fill="{C["green"]}" font-weight="700">pablo@slylem0</tspan>'
-     f'<tspan fill="{C["text"]}">:</tspan><tspan fill="{C["blue"]}" font-weight="700">~</tspan>'
-     f'<tspan fill="{C["text"]}">$ </tspan>')
-cursor = (f'<tspan fill="{C["text"]}">█<animate attributeName="fill-opacity" values="1;0" '
-          f'dur="1s" repeatCount="indefinite" calcMode="discrete"/></tspan>')
-parts.append(f'<text x="{X0}" y="{y}" opacity="0">{p}{cursor}{show(t)}</text>')
+    return f"""
+    <text
+        x="32"
+        y="{y}"
+        fill="{GREEN}"
+        font-family="monospace"
+        font-size="14"
+        opacity="0"
+    >{esc(prompt_text)}
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="{start}s"
+            dur="2.5s"
+            repeatCount="indefinite"
+        />
+    </text>
+    """
 
-assert t < T * 0.95, f'la animación ({t:.1f}s) no cabe en el ciclo ({T}s)'
-H = Y0 + line * LH + 34
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">
-<title id="title">Pablo Nicolás Marín (Slylem0) terminal</title>
-<desc id="desc">Animated terminal: whoami prints the SLYLEM0 banner, fastfetch shows Omarchy, Hyprland, Neovim and an AWS, TypeScript, Python, C++, Java and Go stack, then "Math, Logic and Cybersecurity are my playgrounds".</desc>
-<defs>
-  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0">
-    <stop offset="0" stop-color="#c8a56a"/>
-    <stop offset="0.42" stop-color="#e3b341"/>
-    <stop offset="0.5" stop-color="#fff4d6"/>
-    <stop offset="0.58" stop-color="#e3b341"/>
-    <stop offset="1" stop-color="#c8a56a"/>
-    <animateTransform attributeName="gradientTransform" type="translate" values="-520 0;520 0" dur="3.5s" repeatCount="indefinite"/>
-  </linearGradient>
-  <filter id="glow" x="-5%" y="-30%" width="110%" height="160%">
-    <feGaussianBlur stdDeviation="1.6" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-    <rect width="4" height="2" fill="#ffffff" opacity="0.025"/>
-  </pattern>
-</defs>
-<rect width="{W}" height="{H}" rx="12" fill="{C['bg']}" stroke="{C['border']}"/>
-<path d="M0 12a12 12 0 0 1 12-12h{W - 24}a12 12 0 0 1 12 12v24H0z" fill="{C['bar']}"/>
-<line x1="0" y1="36" x2="{W}" y2="36" stroke="{C['border']}"/>
-<circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
-<text x="{W / 2}" y="23" text-anchor="middle" fill="{C['dim']}" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">pablo@slylem0: ~ — ghostty</text>
-<g font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="{FS}" fill="{C['text']}">
-{chr(10).join(parts)}
-</g>
-<rect x="1" y="37" width="{W - 2}" height="{H - 38}" fill="url(#scan)" pointer-events="none"/>
+def animated_text(value, x, y, start, color=TEXT_COLOR, size=14, speed=0.035):
+    """Create text that appears one character at a time."""
+    elements = []
+
+    for index, char in enumerate(value):
+        char_start = start + index * speed
+
+        elements.append(
+            f"""
+            <text
+                x="{x + index * 8.4}"
+                y="{y}"
+                fill="{color}"
+                font-family="monospace"
+                font-size="{size}"
+                opacity="0"
+            >{esc(char)}
+                <animate
+                    attributeName="opacity"
+                    values="0;1;1;0"
+                    keyTimes="0;0.001;0.999;1"
+                    begin="{char_start}s"
+                    dur="3s"
+                    repeatCount="indefinite"
+                />
+            </text>
+            """
+        )
+
+    return "\n".join(elements)
+
+
+# ============================================================
+# FASTFETCH-STYLE OUTPUT
+# ============================================================
+
+def fastfetch_output(start=4.0):
+    """Create the profile's fastfetch-style terminal output."""
+
+    lines = [
+        ("Name", NAME, GREEN),
+        ("Education", EDUCATION, BLUE),
+        ("OS", OS, YELLOW),
+        ("WM", WM, BLUE),
+        ("Terminal", f"{TERMINAL} + {MULTIPLEXER}", GREEN),
+        ("Editor", EDITOR, YELLOW),
+        ("Shell", SHELL, BLUE),
+        ("Interests", INTERESTS, GREEN),
+        ("Languages", LANGUAGES, YELLOW),
+        ("Focus", FOCUS, BLUE),
+    ]
+
+    output = []
+
+    # Fastfetch-style logo
+    logo = [
+        "        /\\",
+        "       /  \\",
+        "      /\\   \\",
+        "     /      \\",
+        "    /   ,,   \\",
+        "   /   |  |   \\",
+        "  /_-''    ''-_\\",
+    ]
+
+    logo_x = 38
+    logo_y = 210
+
+    for i, line in enumerate(logo):
+        output.append(
+            text_line(
+                line,
+                logo_x,
+                logo_y + i * 17,
+                color=BLUE,
+                size=13,
+                weight="bold",
+            )
+        )
+
+    # Profile information
+    info_x = 260
+    info_y = 210
+
+    for i, (label, value, color) in enumerate(lines):
+        y = info_y + i * 24
+
+        output.append(
+            text_line(
+                f"{label}:",
+                info_x,
+                y,
+                color=color,
+                size=14,
+                weight="bold",
+            )
+        )
+
+        output.append(
+            text_line(
+                value,
+                info_x + 105,
+                y,
+                color=TEXT_COLOR,
+                size=14,
+            )
+        )
+
+    # Make all output appear after the command
+    combined = "\n".join(output)
+
+    return f"""
+    <g opacity="0">
+        {combined}
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="{start}s"
+            dur="12s"
+            repeatCount="indefinite"
+        />
+    </g>
+    """
+
+
+# ============================================================
+# BANNER
+# ============================================================
+
+def load_banner(filename=None):
+    """Load a banner from a text file, or use a default banner."""
+
+    if filename:
+        banner_path = Path(filename)
+
+        if banner_path.exists():
+            return banner_path.read_text(encoding="utf-8").rstrip()
+
+    return r"""
+     _              _                   _
+    / \   ___  ___ | |_ ___  _ __      | | _____      ___ __
+   / _ \ / __|/ _ \| __/ _ \| '_ \  _  | |/ _ \ \ /\ / / '_ \
+  / ___ \\__ \ (_) | || (_) | | | || |_| |  __/\ V  V /| | | |
+ /_/   \_\___/\___/ \__\___/|_| |_| \___/ \___| \_/\_/ |_| |_|
+"""
+
+
+def banner_svg(banner, start=0.7):
+    """Render a banner with a subtle shine animation."""
+
+    lines = banner.splitlines()
+    output = []
+
+    for i, line in enumerate(lines):
+        output.append(
+            text_line(
+                line,
+                32,
+                105 + i * 17,
+                color=GREEN,
+                size=12,
+                weight="bold",
+            )
+        )
+
+    content = "\n".join(output)
+
+    return f"""
+    <g opacity="0">
+        {content}
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="{start}s"
+            dur="19s"
+            repeatCount="indefinite"
+        />
+    </g>
+    """
+
+
+# ============================================================
+# TERMINAL ANIMATION
+# ============================================================
+
+def build_terminal(banner):
+    """Build the complete animated SVG terminal."""
+
+    elements = []
+
+    # --------------------------------------------------------
+    # Terminal window frame
+    # --------------------------------------------------------
+
+    elements.append(f"""
+    <rect
+        width="{WIDTH}"
+        height="{HEIGHT}"
+        rx="14"
+        fill="{TERMINAL_BG}"
+        stroke="{BORDER}"
+        stroke-width="1.5"
+    />
+    """)
+
+    # Title bar
+    elements.append(f"""
+    <rect
+        x="0"
+        y="0"
+        width="{WIDTH}"
+        height="42"
+        rx="14"
+        fill="#21262d"
+    />
+
+    <rect
+        x="0"
+        y="28"
+        width="{WIDTH}"
+        height="14"
+        fill="#21262d"
+    />
+    """)
+
+    # Window control buttons
+    for i, color in enumerate([RED, YELLOW, GREEN]):
+        elements.append(f"""
+        <circle
+            cx="{22 + i * 20}"
+            cy="21"
+            r="6"
+            fill="{color}"
+        />
+        """)
+
+    # Window title
+    elements.append(
+        text_line(
+            f"{USERNAME}@github — {TERMINAL}",
+            320,
+            26,
+            color=MUTED_COLOR,
+            size=13,
+        )
+    )
+
+    # --------------------------------------------------------
+    # Intro prompt
+    # --------------------------------------------------------
+
+    elements.append(prompt("neofetch", 0.2, 75))
+
+    # Banner
+    elements.append(banner_svg(banner, start=0.8))
+
+    # --------------------------------------------------------
+    # Fastfetch output
+    # --------------------------------------------------------
+
+    elements.append(fastfetch_output(start=4.0))
+
+    # --------------------------------------------------------
+    # Password prompt
+    # --------------------------------------------------------
+
+    password_y = 500
+
+    password_content = f"""
+    <text
+        x="32"
+        y="{password_y}"
+        fill="{GREEN}"
+        font-family="monospace"
+        font-size="14"
+    >{esc(USERNAME)}@github:~$ sudo unlock
+    </text>
+
+    <text
+        x="32"
+        y="{password_y + 25}"
+        fill="{TEXT_COLOR}"
+        font-family="monospace"
+        font-size="14"
+    >[sudo] {esc(PASSWORD_LABEL)}:
+    </text>
+
+    <text
+        x="32"
+        y="{password_y + 50}"
+        fill="{GREEN}"
+        font-family="monospace"
+        font-size="14"
+    >Welcome back, {esc(USERNAME)}!
+    </text>
+    """
+
+    elements.append(f"""
+    <g opacity="0">
+        {password_content}
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="15s"
+            dur="4s"
+            repeatCount="indefinite"
+        />
+    </g>
+    """)
+
+    # --------------------------------------------------------
+    # Final prompt + blinking cursor
+    # --------------------------------------------------------
+
+    final_y = 600
+
+    elements.append(f"""
+    <g opacity="0">
+        <text
+            x="32"
+            y="{final_y}"
+            fill="{GREEN}"
+            font-family="monospace"
+            font-size="14"
+        >{esc(USERNAME)}@github:~$</text>
+
+        <rect
+            x="205"
+            y="{final_y - 14}"
+            width="9"
+            height="17"
+            fill="{GREEN}"
+        >
+            <animate
+                attributeName="opacity"
+                values="1;0;1"
+                dur="1s"
+                repeatCount="indefinite"
+            />
+        </rect>
+
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="18s"
+            dur="2s"
+            repeatCount="indefinite"
+        />
+    </g>
+    """)
+
+    # --------------------------------------------------------
+    # SVG wrapper
+    # --------------------------------------------------------
+
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="{WIDTH}"
+    height="{HEIGHT}"
+    viewBox="0 0 {WIDTH} {HEIGHT}"
+    role="img"
+    aria-labelledby="title description"
+>
+    <title id="title">{esc(NAME)} — Animated Terminal</title>
+    <desc id="description">
+        Animated terminal showing {esc(NAME)}, {esc(EDUCATION)},
+        and a fastfetch-style system summary.
+    </desc>
+
+    <rect
+        width="{WIDTH}"
+        height="{HEIGHT}"
+        rx="14"
+        fill="{BACKGROUND}"
+    />
+
+    {"".join(elements)}
 </svg>
-'''
-open(OUT, 'w', encoding='utf-8').write(svg)
-print(f'{OUT}: {W}x{H}, ciclo {T}s, animación {t:.1f}s')
+"""
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+    """Generate the SVG file."""
+
+    output_file = sys.argv[1] if len(sys.argv) > 1 else "terminal.svg"
+    banner_file = sys.argv[2] if len(sys.argv) > 2 else None
+
+    banner = load_banner(banner_file)
+    svg = build_terminal(banner)
+
+    Path(output_file).write_text(svg, encoding="utf-8")
+
+    print(f"Generated: {output_file}")
+    print(f"Dimensions: {WIDTH}x{HEIGHT}")
+    print(f"Animation cycle: {CYCLE}s")
+
+
+if __name__ == "__main__":
+    main()
