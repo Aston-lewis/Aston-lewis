@@ -4,9 +4,6 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-pablo--nicolas--marin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-nicolas-marin)
-[![Instagram](https://img.shields.io/badge/Instagram-pablit0__clavito____-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pablit0_clavito__/)
-[![Email](https://img.shields.io/badge/Email-pnicolasmarin2007%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pnicolasmarin2007@gmail.com)
 
 </div>
 <div align="center">
