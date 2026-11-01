@@ -1,63 +1,523 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="655" viewBox="0 0 880 655" role="img" aria-labelledby="title desc">
-<title id="title">Pablo Nicolás Marín (Slylem0) terminal</title>
-<desc id="desc">Animated terminal: whoami prints the SLYLEM0 banner, fastfetch shows Omarchy, Hyprland, Neovim and an AWS, TypeScript, Python, C++, Java and Go stack, then "Math, Logic and Cybersecurity are my playgrounds".</desc>
-<defs>
-  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0">
-    <stop offset="0" stop-color="#c8a56a"/>
-    <stop offset="0.42" stop-color="#e3b341"/>
-    <stop offset="0.5" stop-color="#fff4d6"/>
-    <stop offset="0.58" stop-color="#e3b341"/>
-    <stop offset="1" stop-color="#c8a56a"/>
-    <animateTransform attributeName="gradientTransform" type="translate" values="-520 0;520 0" dur="3.5s" repeatCount="indefinite"/>
-  </linearGradient>
-  <filter id="glow" x="-5%" y="-30%" width="110%" height="160%">
-    <feGaussianBlur stdDeviation="1.6" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-    <rect width="4" height="2" fill="#ffffff" opacity="0.025"/>
-  </pattern>
-</defs>
-<rect width="880" height="655" rx="12" fill="#0d1117" stroke="#30363d"/>
-<path d="M0 12a12 12 0 0 1 12-12h856a12 12 0 0 1 12 12v24H0z" fill="#161b22"/>
-<line x1="0" y1="36" x2="880" y2="36" stroke="#30363d"/>
-<circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
-<text x="440.0" y="23" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">pablo@slylem0: ~ — ghostty</text>
-<g font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" fill="#c9d1d9">
-<text x="26" y="70" opacity="0"><tspan fill="#7ee787" font-weight="700">pablo@slylem0</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#79c0ff" font-weight="700">~</tspan><tspan fill="#c9d1d9">$ </tspan><tspan fill="#c9d1d9"><tspan fill-opacity="0">w<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0375;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">h<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0412;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">o<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0450;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0488;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">m<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0525;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">i<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.0563;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0250;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="89.0" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve"> █████╗ ███████╗████████╗ ██████╗ ███╗   ██╗<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0750;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="104.5" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve">██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0785;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="120.0" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve">███████║███████╗   ██║   ██║   ██║██╔██╗ ██║<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0820;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="135.5" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve">██╔══██║╚════██║   ██║   ██║   ██║██║╚██╗██║<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0855;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="151.0" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve">██║  ██║███████║   ██║   ╚██████╔╝██║ ╚████║<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0890;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="166.5" opacity="0" fill="url(#shine)" filter="url(#glow)" xml:space="preserve">╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.0925;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="184" opacity="0" ><tspan fill="#c9d1d9" font-weight="700">Pablo Nicolás Marín</tspan><tspan fill="#8b949e">  ·  Systems Engineering @ Universidad del Valle, Colombia</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1085;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="203" opacity="0" ><tspan fill="#8b949e">cloud · linux · algorithms · math &amp; logic · a little bit of quantum</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1160;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="241" opacity="0"><tspan fill="#7ee787" font-weight="700">pablo@slylem0</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#79c0ff" font-weight="700">~</tspan><tspan fill="#c9d1d9">$ </tspan><tspan fill="#c9d1d9"><tspan fill-opacity="0">f<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1510;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1547;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">s<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1585;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">t<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1623;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">f<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1660;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">e<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1698;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">t<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1735;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">c<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1772;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">h<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.1810;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.1385;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="279" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">        /\<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2022;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="298" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">       /  \<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2047;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="317" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">      /\   \<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2072;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="336" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">     /      \<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2098;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="355" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">    /   ,,   \<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2122;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="374" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">   /   |  |  -\<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2147;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="393" opacity="0" fill="#1793d1" font-weight="700" xml:space="preserve">  /_-&#x27;&#x27;    &#x27;&#x27;-_\<animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2172;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="260" opacity="0" ><tspan fill="#7ee787" font-weight="700">pablo</tspan><tspan fill="#c9d1d9">@slylem0</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2172;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="279" opacity="0" ><tspan fill="#8b949e">───────────────</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2233;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="298" opacity="0" ><tspan fill="#e3b341" font-weight="700">OS</tspan><tspan x="279" fill="#c9d1d9">Omarchy (Arch Linux) x86_64</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2293;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="317" opacity="0" ><tspan fill="#e3b341" font-weight="700">WM</tspan><tspan x="279" fill="#c9d1d9">Hyprland</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2353;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="336" opacity="0" ><tspan fill="#e3b341" font-weight="700">Terminal</tspan><tspan x="279" fill="#c9d1d9">Ghostty · tmux</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2412;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="355" opacity="0" ><tspan fill="#e3b341" font-weight="700">Editor</tspan><tspan x="279" fill="#c9d1d9">Neovim (LazyVim)</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2472;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="374" opacity="0" ><tspan fill="#e3b341" font-weight="700">Shell</tspan><tspan x="279" fill="#c9d1d9">bash + starship</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2532;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="393" opacity="0" ><tspan fill="#e3b341" font-weight="700">Cloud</tspan><tspan x="279" fill="#c9d1d9">AWS · Lambda · DynamoDB · Bedrock · CDK</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2592;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="412" opacity="0" ><tspan fill="#e3b341" font-weight="700">Langs</tspan><tspan x="279" fill="#c9d1d9">TypeScript · Python · C++ · Java · Go</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2652;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="201" y="431" opacity="0" ><tspan fill="#e3b341" font-weight="700">Club</tspan><tspan x="279" fill="#c9d1d9">AWS Student Builder Group @ Univalle</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2712;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<g opacity="0"><rect x="201" y="439" width="18" height="12" rx="2" fill="#484f58"/><rect x="223" y="439" width="18" height="12" rx="2" fill="#ff7b72"/><rect x="245" y="439" width="18" height="12" rx="2" fill="#7ee787"/><rect x="267" y="439" width="18" height="12" rx="2" fill="#e3b341"/><rect x="289" y="439" width="18" height="12" rx="2" fill="#79c0ff"/><rect x="311" y="439" width="18" height="12" rx="2" fill="#d2a8ff"/><rect x="333" y="439" width="18" height="12" rx="2" fill="#39c5cf"/><rect x="355" y="439" width="18" height="12" rx="2" fill="#f0f6fc"/><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2772;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></g>
-<text x="26" y="488" opacity="0"><tspan fill="#7ee787" font-weight="700">pablo@slylem0</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#79c0ff" font-weight="700">~</tspan><tspan fill="#c9d1d9">$ </tspan><tspan fill="#c9d1d9"><tspan fill-opacity="0">c<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3147;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3185;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">t<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3223;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">&#160;<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3260;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">p<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3297;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">l<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3335;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3372;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">y<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3410;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">g<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3448;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">r<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3485;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">o<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3523;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">u<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3560;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">n<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3598;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">d<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3635;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">.<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3672;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">t<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3710;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">x<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3748;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">t<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.3785;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.3023;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="507" opacity="0" ><tspan fill="#d2a8ff">"Math, Logic &amp; Cybersecurity are my playgrounds"</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.3997;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="545" opacity="0"><tspan fill="#7ee787" font-weight="700">pablo@slylem0</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#79c0ff" font-weight="700">~</tspan><tspan fill="#c9d1d9">$ </tspan><tspan fill="#c9d1d9"><tspan fill-opacity="0">s<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4397;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">u<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4435;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">d<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4473;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">o<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4510;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">&#160;<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4548;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">m<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4585;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4622;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">k<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4660;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">e<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4698;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">&#160;<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4735;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">m<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4773;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">e<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4810;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">-<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4848;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4885;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">-<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4923;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">s<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4960;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">a<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.4997;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">n<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5035;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">d<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5072;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">w<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5110;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">i<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5148;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">c<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5185;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">h<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5222;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.4273;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="564" opacity="0" ><tspan fill="#8b949e">[sudo] password for pablo: <tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5560;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5605;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5650;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5695;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5740;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5785;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5830;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan><tspan fill-opacity="0">*<animate attributeName="fill-opacity" values="0;1;0" keyTimes="0;0.5875;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></tspan></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5410;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="583" opacity="0" ><tspan fill="#7ee787">okay.</tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.6120;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-<text x="26" y="621" opacity="0"><tspan fill="#7ee787" font-weight="700">pablo@slylem0</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#79c0ff" font-weight="700">~</tspan><tspan fill="#c9d1d9">$ </tspan><tspan fill="#c9d1d9">█<animate attributeName="fill-opacity" values="1;0" dur="1s" repeatCount="indefinite" calcMode="discrete"/></tspan><animate attributeName="opacity" values="0;1;0" keyTimes="0;0.6420;0.975" dur="20.0s" repeatCount="indefinite" calcMode="discrete"/></text>
-</g>
-<rect x="1" y="37" width="878" height="617" fill="url(#scan)" pointer-events="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="880"
+    height="655"
+    viewBox="0 0 880 655"
+    role="img"
+    aria-labelledby="title description"
+>
+    <title id="title">Aston Valerine Lewis — Animated Terminal</title>
+    <desc id="description">
+        Animated terminal showing Aston Valerine Lewis, AIML @ SJEC,
+        and a fastfetch-style system summary.
+    </desc>
+
+    <rect
+        width="880"
+        height="655"
+        rx="14"
+        fill="#0d1117"
+    />
+
+    
+    <rect
+        width="880"
+        height="655"
+        rx="14"
+        fill="#161b22"
+        stroke="#30363d"
+        stroke-width="1.5"
+    />
+    
+    <rect
+        x="0"
+        y="0"
+        width="880"
+        height="42"
+        rx="14"
+        fill="#21262d"
+    />
+
+    <rect
+        x="0"
+        y="28"
+        width="880"
+        height="14"
+        fill="#21262d"
+    />
+    
+        <circle
+            cx="22"
+            cy="21"
+            r="6"
+            fill="#f85149"
+        />
+        
+        <circle
+            cx="42"
+            cy="21"
+            r="6"
+            fill="#d29922"
+        />
+        
+        <circle
+            cx="62"
+            cy="21"
+            r="6"
+            fill="#3fb950"
+        />
+        
+    <text
+        x="320"
+        y="26"
+        fill="#8b949e"
+        font-family="monospace"
+        font-size="13"
+        font-weight="normal"
+    >Aston-lewis@github — Ghostty</text>
+    
+    <text
+        x="32"
+        y="75"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+        opacity="0"
+    >Aston-lewis@github:~$ neofetch
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="0.2s"
+            dur="2.5s"
+            repeatCount="indefinite"
+        />
+    </text>
+    
+    <g opacity="0">
+        
+    <text
+        x="32"
+        y="105"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    > █████╗ ███████╗████████╗ ██████╗ ███╗   ██╗</text>
+    
+
+    <text
+        x="32"
+        y="122"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    >██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║</text>
+    
+
+    <text
+        x="32"
+        y="139"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    >███████║███████╗   ██║   ██║   ██║██╔██╗ ██║</text>
+    
+
+    <text
+        x="32"
+        y="156"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    >██╔══██║╚════██║   ██║   ██║   ██║██║╚██╗██║</text>
+    
+
+    <text
+        x="32"
+        y="173"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    >██║  ██║███████║   ██║   ╚██████╔╝██║ ╚████║</text>
+    
+
+    <text
+        x="32"
+        y="190"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="12"
+        font-weight="bold"
+    >╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝</text>
+    
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="0.8s"
+            dur="19s"
+            repeatCount="indefinite"
+        />
+    </g>
+    
+    <g opacity="0">
+        
+    <text
+        x="38"
+        y="210"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >        /\</text>
+    
+
+    <text
+        x="38"
+        y="227"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >       /  \</text>
+    
+
+    <text
+        x="38"
+        y="244"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >      /\   \</text>
+    
+
+    <text
+        x="38"
+        y="261"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >     /      \</text>
+    
+
+    <text
+        x="38"
+        y="278"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >    /   ,,   \</text>
+    
+
+    <text
+        x="38"
+        y="295"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >   /   |  |   \</text>
+    
+
+    <text
+        x="38"
+        y="312"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="13"
+        font-weight="bold"
+    >  /_-&#x27;&#x27;    &#x27;&#x27;-_\</text>
+    
+
+    <text
+        x="260"
+        y="210"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Name:</text>
+    
+
+    <text
+        x="365"
+        y="210"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Aston Valerine Lewis</text>
+    
+
+    <text
+        x="260"
+        y="234"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Education:</text>
+    
+
+    <text
+        x="365"
+        y="234"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >AIML @ SJEC</text>
+    
+
+    <text
+        x="260"
+        y="258"
+        fill="#d29922"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >OS:</text>
+    
+
+    <text
+        x="365"
+        y="258"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Omarchy (Arch Linux)</text>
+    
+
+    <text
+        x="260"
+        y="282"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >WM:</text>
+    
+
+    <text
+        x="365"
+        y="282"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Hyprland</text>
+    
+
+    <text
+        x="260"
+        y="306"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Terminal:</text>
+    
+
+    <text
+        x="365"
+        y="306"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Ghostty + tmux</text>
+    
+
+    <text
+        x="260"
+        y="330"
+        fill="#d29922"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Editor:</text>
+    
+
+    <text
+        x="365"
+        y="330"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >VS Code</text>
+    
+
+    <text
+        x="260"
+        y="354"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Shell:</text>
+    
+
+    <text
+        x="365"
+        y="354"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >bash</text>
+    
+
+    <text
+        x="260"
+        y="378"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Interests:</text>
+    
+
+    <text
+        x="365"
+        y="378"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >AI · Machine Learning</text>
+    
+
+    <text
+        x="260"
+        y="402"
+        fill="#d29922"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Languages:</text>
+    
+
+    <text
+        x="365"
+        y="402"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Python · C++ · C</text>
+    
+
+    <text
+        x="260"
+        y="426"
+        fill="#58a6ff"
+        font-family="monospace"
+        font-size="14"
+        font-weight="bold"
+    >Focus:</text>
+    
+
+    <text
+        x="365"
+        y="426"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+        font-weight="normal"
+    >Computer Vision · ML</text>
+    
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="4.0s"
+            dur="12s"
+            repeatCount="indefinite"
+        />
+    </g>
+    
+    <g opacity="0">
+        
+    <text
+        x="32"
+        y="500"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+    >Aston-lewis@github:~$ sudo unlock
+    </text>
+
+    <text
+        x="32"
+        y="525"
+        fill="#c9d1d9"
+        font-family="monospace"
+        font-size="14"
+    >[sudo] password for aston:
+    </text>
+
+    <text
+        x="32"
+        y="550"
+        fill="#3fb950"
+        font-family="monospace"
+        font-size="14"
+    >Welcome back, Aston-lewis!
+    </text>
+    
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="15s"
+            dur="4s"
+            repeatCount="indefinite"
+        />
+    </g>
+    
+    <g opacity="0">
+        <text
+            x="32"
+            y="600"
+            fill="#3fb950"
+            font-family="monospace"
+            font-size="14"
+        >Aston-lewis@github:~$</text>
+
+        <rect
+            x="205"
+            y="586"
+            width="9"
+            height="17"
+            fill="#3fb950"
+        >
+            <animate
+                attributeName="opacity"
+                values="1;0;1"
+                dur="1s"
+                repeatCount="indefinite"
+            />
+        </rect>
+
+        <animate
+            attributeName="opacity"
+            values="0;1;1;0"
+            keyTimes="0;0.001;0.999;1"
+            begin="18s"
+            dur="2s"
+            repeatCount="indefinite"
+        />
+    </g>
+    
 </svg>
