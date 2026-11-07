@@ -169,7 +169,7 @@ MARGIN = 26             # outer space (room for the shadow)
 CORNER_RADIUS = 12
 TERM_COLS = None        # None -> auto-fit content
 TERM_ROWS = None        # None -> auto-fit tallest screen
-MAX_AUTO_ROWS = 24      # auto mode: start a new screen when more rows are needed
+MAX_AUTO_ROWS = 30      # auto mode: start a new screen when more rows are needed
 MIN_COLS = 64
 DISPLAY_WIDTH = None    # px width attribute of the <svg>; None -> natural size
 
@@ -183,7 +183,7 @@ OUTPUT_DELAY = 0.12     # Enter -> first output line
 LINE_DELAY = 0.05       # between output lines
 PROMPT_DELAY = 0.2      # last output line -> next prompt
 PAGE_FADE = 0.4         # fade-out time when a screen is cleared / loop restarts
-END_HOLD = 4.0          # final prompt idles this long before the loop restarts
+END_HOLD = 5.0          # final prompt idles this long before the loop restarts
 CURSOR_BLINK = 0.5      # half period of cursor blink
 SEED = 7                # RNG seed for typing jitter (deterministic output)
 
