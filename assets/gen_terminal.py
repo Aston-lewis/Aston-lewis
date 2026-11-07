@@ -47,25 +47,22 @@ WINDOW_TITLE = None  # None -> "<user>@<host>: <cwd>"
 # >>> Leading/trailing blank lines are ignored. (Sample below is a placeholder.)
 # -----------------------------------------------------------------------------
 DISTRO_ASCII = r"""
-                   -`
-                  .o+`
-                 `ooo/
-                `+oooo:
-               `+oooooo:
-               -+oooooo+:
-             `/:-:++oooo+:
-            `/++++/+++++++:
-           `/++++++++++++++:
-          `/+++ooooooooooooo/`
-         ./ooosssso++osssssso+`
-        .oossssso-````/ossssss+`
-       -osssssso.      :ssssssso.
-      :osssssss/        osssso+++.
-     /ossssssss/        +ssssooo/-
-   `/ossssso+/:-        -:/+osssso+-
-  `+sso+:-`                 `.-/+oso:
- `++:.                           `-/+/
- .`                                 `/
+                   o+
+                  ooo
+                 +oooo
+                +oooooo
+                +oooooo+
+              /:-:++oooo+
+             /++++/+++++++
+            /++++++++++++++
+           ooosssso++osssssso
+          ossssso-````/ossssss
+         sssssso.      :sssssss
+        sssssss/        osssso++
+       ssssssss/        +ssssooo/
+     ossssso+/:-        -:/+osssso
+    sso+:-`                 `.-/+os
+   +:.                           `-/      `
 """
 
 # Logo colour(s): a single colour, or a list that is spread over the logo in
