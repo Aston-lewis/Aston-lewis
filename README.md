@@ -79,10 +79,7 @@
 <hr>
 <br><br>
 
-<p align="center">
-  <img src="koi/koi.gif" width="300" alt="My Git Koi">
-</p>
-<br/>
+
 
 <div align = "center">
   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Aston-lewis&theme=dark&timezone=IST" alt="GitHub Streak" /></a>
