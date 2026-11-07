@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/terminal.svg" width="900" alt="Animated Linux Terminal">
+  <img src="assets/terminal.svg" width="700" alt="Animated Linux Terminal">
 </p>
 <br/>
 
