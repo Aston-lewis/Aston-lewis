@@ -3,11 +3,6 @@
 </p>
 <br/>
 
-
-
-
-<br><br>
-
 <div align="center">
   <a href="https://git.io/typing-svg">
     <img
