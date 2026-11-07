@@ -169,7 +169,7 @@ MARGIN = 26             # outer space (room for the shadow)
 CORNER_RADIUS = 12
 TERM_COLS = None        # None -> auto-fit content
 TERM_ROWS = None        # None -> auto-fit tallest screen
-MAX_AUTO_ROWS = 30      # auto mode: start a new screen when more rows are needed
+MAX_AUTO_ROWS = 50      # auto mode: start a new screen when more rows are needed
 MIN_COLS = 64
 DISPLAY_WIDTH = None    # px width attribute of the <svg>; None -> natural size
 
